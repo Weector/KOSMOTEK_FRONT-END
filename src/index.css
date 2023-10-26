@@ -1,10 +1,47 @@
 @import-normalize;
 
+
+:root{
+  --clr-stroke: #CECECE;
+  --clr-main-text: #1A1A1A;
+  --clr-secondary-text:#B8B8B8;
+  --clr-bckg: #fff;
+  --clr-actoin: #FF5151;
+  --clr-focus: #D99A9A;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-display: swap;
+  src: local('FixelText-Regular'), url('../src/styles/fonts/FixelText/FixelText-Regular.ttf') format("truetype"),
+  url('../src/styles/fonts/FixelText/FixelText-Regular.woff2') format("woff2");
+  font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-display: swap;
+  src: local('FixelText-Medium'), url('../src/styles/fonts/FixelText/FixelText-Medium.ttf') format("truetype"),
+  url('../src/styles/fonts/FixelText/FixelText-Medium.woff2') format("woff2");
+  font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-display: swap;
+  src: local('FixelText-SemiBold'), url('../src/styles/fonts/FixelText/FixelText-SemiBold.ttf') format("truetype"),
+  url('../src/styles/fonts/FixelText/FixelText-SemiBold.woff2') format("woff2");
+  font-weight: 600;
+	font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Fixel Text', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.56px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

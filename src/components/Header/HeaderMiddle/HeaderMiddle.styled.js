@@ -35,8 +35,6 @@ export const ButtonSearch = styled.button`
   width: 24px;
   height: 24px;
 
-  cursor: pointer;
-
   background-color: inherit;
   border: none;
 

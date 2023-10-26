@@ -5,6 +5,7 @@ import Brands from "./Brands/Brands";
 import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
 import Navigation from "./Navigation/Navigation";
+import Promotions from "./Promotions/Promotions";
 
 // const Layout = lazy(() => import('./Layout'));
 
@@ -15,6 +16,7 @@ export const App = () => {
       <Navigation />
       <Hero />
       <Brands />
+      <Promotions />
     </>
   );
 };

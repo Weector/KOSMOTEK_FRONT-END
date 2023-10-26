@@ -8,6 +8,7 @@
   --clr-bckg: #fff;
   --clr-actoin: #FF5151;
   --clr-focus: #D99A9A;
+  --clr-card: #F8F8F8
 }
 
 @font-face {
@@ -42,6 +43,7 @@ body {
   font-family: 'Fixel Text', sans-serif;
   font-size: 14px;
   letter-spacing: 0.56px;
+  line-height: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

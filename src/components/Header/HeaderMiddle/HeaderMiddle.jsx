@@ -17,9 +17,9 @@ export default function HeaderMiddle() {
   return (
     <Container>
       <HeaderMiddleContainer>
-        <div>
+        <a href="/">
           <IconLogo />
-        </div>
+        </a>
         <InputWrap>
           <Input
             type="text"

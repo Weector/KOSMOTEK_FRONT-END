@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Container from "../../Container/Container";
 import {
   TopContentWrap,
@@ -13,10 +12,10 @@ export default function HeaderTop() {
       <Container>
         <TopContentWrap>
           <div>
-            <a href="#">Dostawa gratis! *</a>
+            <a href="/">Dostawa gratis! *</a>
           </div>
           <div>
-            <a href="#">Super ofery!</a>
+            <a href="/">Super oferty!</a>
           </div>
           <LanguageList>
             <NavLanguage to="/">PL</NavLanguage>

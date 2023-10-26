@@ -39,7 +39,7 @@ export default function Hero() {
 
     timeRef.current = setTimeout(() => {
       handleRight();
-    }, 3000);
+    }, 5000);
   });
 
   return (

@@ -44,6 +44,11 @@ a {
   color: currentColor;
 }
 
+button {
+  cursor: pointer;
+  padding: 0;
+  font-family:inherit;
+}
 
 `;
 

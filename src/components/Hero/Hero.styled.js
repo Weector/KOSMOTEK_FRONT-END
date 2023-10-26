@@ -7,8 +7,8 @@ export const HeroContainer = styled.div`
 export const SlideWrap = styled.div`
   position: relative;
 
-  width: 1200px;
-  height: 390px;
+  max-width: 1200px;
+  aspect-ratio: 3/1;
 
   overflow: hidden;
 `;
@@ -17,11 +17,12 @@ export const SlideButton = styled.button`
   position: absolute;
   top: 50%;
 
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
+  width: 34px;
+  height: 34px;
+
+  background-color: rgba(255, 255, 255, 0.75);
   border: none;
-  background-image: url("../../icons/arrow.svg");
+  background-image: url("../../icons/angle.svg");
   background-repeat: no-repeat;
   background-size: cover;
   color: black;

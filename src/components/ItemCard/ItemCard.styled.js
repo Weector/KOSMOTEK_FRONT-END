@@ -110,8 +110,10 @@ export const PricePrevious = styled.p`
 
 export const ButtonWrap = styled.div`
   opacity: 0;
+  transition: opacity 0.5s linear;
 
   ${ItemContainer}:hover & {
     opacity: 1;
+    transition: opacity 0.5s linear;
   }
 `;

@@ -18,6 +18,28 @@ export const Btn = styled.button`
   background-color: var(--clr-main-text);
 
   width: ${(props) => props.$size};
+
+  span {
+    position: relative;
+  }
+
+  span {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0px;
+      height: 0.75px;
+      background: var(--clr-card);
+      transition: width 0.3s linear;
+    }
+  }
+
+  span {
+    &:hover::after {
+      width: 100%;
+    }
+  }
 `;
 
 export const IconShopping = styled(Shopping)`

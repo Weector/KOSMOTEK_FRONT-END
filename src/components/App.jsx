@@ -2,6 +2,7 @@
 // import { Routes, Route } from "react-router-dom";
 
 import Brands from "./Brands/Brands";
+import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
 import Navigation from "./Navigation/Navigation";
@@ -17,6 +18,7 @@ export const App = () => {
       <Hero />
       <Brands />
       <Promotions />
+      <Footer />
     </>
   );
 };

@@ -6,9 +6,9 @@ export const StyledContainer = styled.div`
   padding-right: 15px;
   margin: 0 auto;
 
-  font-size: 14px;
+  /* font-size: 14px; */
 
-  color: var(--clr-main-text);
+ 
 
   /* padding-top:${({ isPading }) => (isPading ? " 57px" : "0px")};
   padding-bottom:${({ isPading }) => (isPading ? " 57px" : "0px")}; */

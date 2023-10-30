@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   NavigationStyle,
   NavigationWrap,
@@ -5,16 +6,17 @@ import {
 } from "./Navigation.styled";
 
 export default function Navigation() {
+  const { t } = useTranslation();
   return (
     <NavigationWrap>
       <NavigationStyle>
-        <LinkStyle to="/promotion">Promocję</LinkStyle>
-        <LinkStyle to="/eyes">Oczy</LinkStyle>
-        <LinkStyle to="/makeup">Palety do makijażu</LinkStyle>
-        <LinkStyle to="/body">Ciało i kąpiel</LinkStyle>
-        <LinkStyle to="/lips">Usta</LinkStyle>
-        <LinkStyle to="/face">Twarz</LinkStyle>
-        <LinkStyle to="/all">Wszystkie towary</LinkStyle>
+        <LinkStyle to="/promotion">{t("nav.actions")}</LinkStyle>
+        <LinkStyle to="/eyes">{t("nav.eyes")}</LinkStyle>
+        <LinkStyle to="/makeup">{t("nav.makeup_pallets")}</LinkStyle>
+        <LinkStyle to="/body">{t("nav.body")}</LinkStyle>
+        <LinkStyle to="/lips">{t("nav.lips")}</LinkStyle>
+        <LinkStyle to="/face">{t("nav.face")}</LinkStyle>
+        <LinkStyle to="/all">{t("nav.all_products")}</LinkStyle>
       </NavigationStyle>
     </NavigationWrap>
   );

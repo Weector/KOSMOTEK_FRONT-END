@@ -1,5 +1,6 @@
+import { useTranslation } from "react-i18next";
 import Container from "../Container/Container";
-import ItemCard from "../ItemCard/ItemCard";
+import ProductCard from "../ProductCard/ProductCard";
 import {
   Title,
   PromotionContainer,
@@ -10,17 +11,18 @@ import {
 } from "./Promotions.styled";
 
 export default function Promotions() {
+  const { t } = useTranslation();
   return (
     <Container>
       <PromotionContainer>
-        <Title>PROMOCJE</Title>
+        <Title>{t("actions")}</Title>
         <PromotionWrap>
           <ButtonWrap>
             <ArrowBtn $left></ArrowBtn>
             <ArrowBtn></ArrowBtn>
           </ButtonWrap>
           <ItemWrap>
-            <ItemCard />
+            <ProductCard />
           </ItemWrap>
         </PromotionWrap>
       </PromotionContainer>

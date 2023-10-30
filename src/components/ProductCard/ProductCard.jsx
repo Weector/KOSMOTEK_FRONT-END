@@ -15,16 +15,18 @@ import {
   Description,
   PriceWrap,
   ButtonWrap,
-} from "./ItemCard.styled";
+} from "./ProductCard.styled";
 
 import Button from "../Button/Button";
+import { useTranslation } from "react-i18next";
 
-export default function ItemCard() {
+export default function ProductCard() {
+  const { t } = useTranslation();
   return (
     <ItemContainer>
       <ImgContainer>
         <Inform>
-          <p>Działanie</p>
+          <p>{t("product.action")}</p>
         </Inform>
         <ImgItem src="img/image.png" alt="Brasmatik" />
       </ImgContainer>

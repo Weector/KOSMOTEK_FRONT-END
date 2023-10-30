@@ -1,3 +1,4 @@
+import i18next from "i18next";
 import Container from "../../Container/Container";
 import {
   TopContentWrap,
@@ -5,22 +6,30 @@ import {
   LanguageList,
   NavLanguage,
 } from "./HeaderTop.styled";
+import { useTranslation } from "react-i18next";
 
 export default function HeaderTop() {
+  const { t } = useTranslation();
   return (
     <HeaderTopWrap>
       <Container>
         <TopContentWrap>
           <div>
-            <a href="/">Dostawa gratis! *</a>
+            <a href="/">{t("header.dostavka")} *</a>
           </div>
           <div>
-            <a href="/">Super oferty!</a>
+            <a href="/">{t("header.oferty")}</a>
           </div>
           <LanguageList>
-            <NavLanguage to="/">PL</NavLanguage>
-            <NavLanguage to="/en">EN</NavLanguage>
-            <NavLanguage to="/ua">UA</NavLanguage>
+            <NavLanguage onClick={() => i18next.changeLanguage("pl")} to="/">
+              PL
+            </NavLanguage>
+            <NavLanguage onClick={() => i18next.changeLanguage("en")} to="/en">
+              EN
+            </NavLanguage>
+            <NavLanguage onClick={() => i18next.changeLanguage("ua")} to="/ua">
+              UA
+            </NavLanguage>
           </LanguageList>
         </TopContentWrap>
       </Container>

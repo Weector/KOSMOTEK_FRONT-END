@@ -1,4 +1,5 @@
 import { Formik } from "formik";
+import { useTranslation } from "react-i18next";
 import Container from "../Container/Container";
 
 import {
@@ -24,64 +25,66 @@ import {
 } from "./Footer.styled";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <FooterContainer>
       <Container>
         <FooterWrap>
           <FooterTopWrap>
             <ColumnWrap>
-              <h2>INFORMACJE</h2>
+              <h2>{t("footer.information")}</h2>
               <ListWrap>
                 <li>
-                  <ItemLink>O nas</ItemLink>
+                  <ItemLink>{t("footer.about_us")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Kontakt</ItemLink>
+                  <ItemLink>{t("footer.kontact")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Regulamin</ItemLink>
+                  <ItemLink>{t("footer.rools")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Polityka Prywatności</ItemLink>
+                  <ItemLink>{t("footer.privacy_policy")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Bank account number</ItemLink>
+                  <ItemLink>{t("footer.rachunku")}</ItemLink>
                 </li>
               </ListWrap>
             </ColumnWrap>
             <ColumnWrap>
-              <h2>DLA KLIENTA</h2>
+              <h2>{t("footer.client")}</h2>
               <ListWrap>
                 <li>
-                  <ItemLink>Najczęściej zadawane pytania</ItemLink>
+                  <ItemLink>{t("footer.questions")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Koszty i terminy dostawy</ItemLink>
+                  <ItemLink>{t("footer.price_delivery")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Zwroty,reklamacje</ItemLink>
+                  <ItemLink>{t("footer.return")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Poradnik kupującego</ItemLink>
+                  <ItemLink>{t("footer.advice")}</ItemLink>
                 </li>
                 <li>
-                  <ItemLink>Informacje o REFORMULACJI</ItemLink>
+                  <ItemLink>{t("footer.information_formulas")}</ItemLink>
                 </li>
               </ListWrap>
             </ColumnWrap>
           </FooterTopWrap>
           <FooterRightWrap>
             <SubscribeWrap>
-              <p>Promocje, rabaty i nowości wyszłemy na e-mail</p>
+              <p>{t("footer.sub")}</p>
               <Formik>
                 <FormStyle>
                   <Input
                     // name="email"
-                    placeholder="Wpisz swoj adres e-mail"
+                    placeholder={t("footer.placeholder")}
                     type="email"
                   />
                   <FormButton>
-                    <span>Zapisz się</span>
+                    <span>{t("footer.sign_up")}</span>
                   </FormButton>
                 </FormStyle>
               </Formik>

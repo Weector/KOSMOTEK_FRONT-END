@@ -12,8 +12,10 @@ import {
   ButtonSearch,
 } from "./HeaderMiddle.styled";
 import Container from "../../Container/Container";
+import { useTranslation } from "react-i18next";
 
 export default function HeaderMiddle() {
+  const { t } = useTranslation();
   return (
     <Container>
       <HeaderMiddleContainer>
@@ -21,10 +23,7 @@ export default function HeaderMiddle() {
           <IconLogo />
         </a>
         <InputWrap>
-          <Input
-            type="text"
-            placeholder="Wyszukaj perfumy, kosmetyki, markę..."
-          />
+          <Input type="text" placeholder={t("header.placeholder")} />
           <ButtonSearch>
             <IconSearch />
           </ButtonSearch>

@@ -1,6 +1,6 @@
 const TranslationPL = {
   header: {
-    dostavka: "Dostawa gratis!",
+    delivery: "Dostawa gratis!",
     oferty: "Super oferty!",
 
     placeholder: "Wyszukaj perfumy, kosmetyki, markę...",
@@ -37,6 +37,26 @@ const TranslationPL = {
     sub: "Promocje, rabaty i nowości wyszłemy na e-mail",
     placeholder: "Wpisz swoj adres e-mail",
     sign_up: "Zapisz się",
+  },
+
+  forms: {
+    login: "Logowanie",
+    log: "Zaloguj",
+    forgot_password: "Zapomniałeś hasła",
+
+    register: "Rejestracja",
+
+    name: "Twoje imię",
+    surname: "Twoje nazwisko",
+    birth_date: "Data urodzenia",
+    phone: "Telefon",
+    email: "E-mail",
+    password: "Hasło",
+    repeat_password: "Powtórz hasło",
+    btn_register: "Rejestr",
+
+    password_recovery: "Odzyskiwanie hasła",
+    remind: "Przypomnieć",
   },
 };
 

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "name": "L`Oréal Paris Volume Million Lashes Classic",
+    "description": "Tusz do rzęs zapewniający wyrazistą objętość rzęs",
+    "price": "21.75",
+    "action": "16.75",
+    "coments": "2",
+    "stars": "5",
+    "img": "/img/products/5.png",
+    "img2": "/img/products/4.png"
+  },
+  {
+     "id": "2",
+    "name": "Chanel Les Beiges Palette Regard Belle Mine Naturelle",
+    "description": "Paleta cieni do powiek z efektem naturalnego blasku",
+    "price": "25.75",
+    "action": "21.45",
+    "coments": "5",
+    "stars": "5",
+    "img": "/img/products/9.png",
+    "img2": "/img/products/8.png"
+  },
+  {
+     "id": "3",
+    "name": "Catrice Brow Powder Set Waterproof",
+    "description": "Paleta do brwi",
+    "price": "23.75",
+    "action": "22.45",
+    "coments": "10",
+    "stars": "5",
+    "img": "/img/products/2.png",
+    "img2": "/img/products/1.png"
+  },
+  {
+     "id": "4",
+    "name": "Lancome Hypnose Volume-a-Porter Mascara",
+    "description": "Tusz do rzęs nadający objętość rzęsom",
+    "price": "23.75",
+    "action": "22.45",
+    "coments": "10",
+    "stars": "5",
+    "img": "/img/products/6.png",
+    "img2": "/img/products/7.png"
+  },
+   {
+     "id": "5",
+    "name": "L`Oréal Paris Volume Million Lashes Classic",
+    "description": "Tusz do rzęs zapewniający wyrazistą objętość rzęs",
+    "price": "21.75",
+    "action": "16.75",
+    "coments": "2",
+    "stars": "5",
+    "img": "/img/products/5.png",
+    "img2": "/img/products/4.png"
+  },
+  {
+     "id": "6",
+    "name": "Chanel Les Beiges Palette Regard Belle Mine Naturelle",
+    "description": "Paleta cieni do powiek z efektem naturalnego blasku",
+    "price": "25.75",
+    "action": "21.45",
+    "coments": "5",
+    "stars": "5",
+    "img": "/img/products/9.png",
+    "img2": "/img/products/8.png"
+  }
+]

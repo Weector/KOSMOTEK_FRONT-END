@@ -3,7 +3,6 @@ import {
   StarIcon,
   ImgContainer,
   ItemContainer,
-  ImgItem,
   InformContainer,
   InformTitle,
   StarContainer,
@@ -15,27 +14,29 @@ import {
   Description,
   PriceWrap,
   ButtonWrap,
+  HeartIcon,
+  HeartWrap,
 } from "./ProductCard.styled";
 
 import Button from "../Button/Button";
 import { useTranslation } from "react-i18next";
 
-export default function ProductCard() {
+export default function ProductCard({ product, className }) {
   const { t } = useTranslation();
   return (
     <ItemContainer>
-      <ImgContainer>
+      <ImgContainer $img={product.img} $img2={product.img2}>
         <Inform>
           <p>{t("product.action")}</p>
         </Inform>
-        <ImgItem src="img/image.png" alt="Brasmatik" />
+        <HeartWrap>
+          <HeartIcon />
+        </HeartWrap>
       </ImgContainer>
       <InformContainer>
-        <InformTitle>Brasmatik do rzęs jest czarny</InformTitle>
-        <Description>
-          Tusz do rzęs zapewniający elegancką objętość i wydłużenie rzęs
-        </Description>
-        <PriceWrap>
+        <InformTitle>{product.name}</InformTitle>
+        <Description>{product.description}</Description>
+        <PriceWrap className={className}>
           <div>
             <StarContainer>
               <StarBox>
@@ -49,11 +50,11 @@ export default function ProductCard() {
                   <StarIcon />
                 </StarWrap>
               </StarBox>
-              <p>2</p>
+              <p>{product.coments}</p>
             </StarContainer>
             <PriceContainer>
-              <PriceAction>369 ₴</PriceAction>
-              <PricePrevious>420 ₴</PricePrevious>
+              <PriceAction>{product.action}₴</PriceAction>
+              <PricePrevious>{product.price}₴</PricePrevious>
             </PriceContainer>
           </div>
           <ButtonWrap>
@@ -64,3 +65,43 @@ export default function ProductCard() {
     </ItemContainer>
   );
 }
+
+// <ItemContainer>
+//       <ImgContainer>
+//         <Inform>
+//           <p>{t("product.action")}</p>
+//         </Inform>
+//         <ImgItem src="img/image.png" alt="Brasmatik" />
+//       </ImgContainer>
+//       <InformContainer>
+//         <InformTitle>Brasmatik do rzęs jest czarny</InformTitle>
+//         <Description>
+//           Tusz do rzęs zapewniający elegancką objętość i wydłużenie rzęs
+//         </Description>
+//         <PriceWrap>
+//           <div>
+//             <StarContainer>
+//               <StarBox>
+//                 <StarWrap>
+//                   <StarIcon />
+//                 </StarWrap>
+//                 <StarWrap>
+//                   <StarIcon />
+//                 </StarWrap>
+//                 <StarWrap>
+//                   <StarIcon />
+//                 </StarWrap>
+//               </StarBox>
+//               <p>2</p>
+//             </StarContainer>
+//             <PriceContainer>
+//               <PriceAction>369 ₴</PriceAction>
+//               <PricePrevious>420 ₴</PricePrevious>
+//             </PriceContainer>
+//           </div>
+//           <ButtonWrap>
+//             <Button text="Do kosza" width="148px" isShopping></Button>
+//           </ButtonWrap>
+//         </PriceWrap>
+//       </InformContainer>
+//     </ItemContainer>

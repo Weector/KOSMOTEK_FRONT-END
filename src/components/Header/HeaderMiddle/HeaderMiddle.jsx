@@ -19,9 +19,9 @@ export default function HeaderMiddle() {
   return (
     <Container>
       <HeaderMiddleContainer>
-        <a href="/">
+        <Link to="/">
           <IconLogo />
-        </a>
+        </Link>
         <InputWrap>
           <Input type="text" placeholder={t("header.placeholder")} />
           <ButtonSearch>
@@ -29,7 +29,7 @@ export default function HeaderMiddle() {
           </ButtonSearch>
         </InputWrap>
         <IconsNav>
-          <Link>
+          <Link to="/login">
             <IconUser />
           </Link>
           <Link>

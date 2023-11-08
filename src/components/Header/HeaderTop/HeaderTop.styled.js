@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderTopWrap = styled.div`
@@ -17,9 +17,4 @@ export const LanguageList = styled.nav`
   column-gap: 16px;
 `;
 
-export const NavLanguage = styled(NavLink)`
-  color: var(--clr-secondary-text);
-  &.active {
-    color: var(--clr-main-text);
-  }
-`;
+export const NavLanguage = styled(Link)``;

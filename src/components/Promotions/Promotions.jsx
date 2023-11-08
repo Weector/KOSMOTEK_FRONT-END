@@ -1,31 +1,15 @@
-import { useTranslation } from "react-i18next";
-import Container from "../Container/Container";
 import ProductCard from "../ProductCard/ProductCard";
-import {
-  Title,
-  PromotionContainer,
-  PromotionWrap,
-  ButtonWrap,
-  ArrowBtn,
-  ItemWrap,
-} from "./Promotions.styled";
+import products from "../../data/product.json";
+import Carousel from "../Carousel/Carousel";
+import { useTranslation } from "react-i18next";
 
 export default function Promotions() {
   const { t } = useTranslation();
   return (
-    <Container>
-      <PromotionContainer>
-        <Title>{t("actions")}</Title>
-        <PromotionWrap>
-          <ButtonWrap>
-            <ArrowBtn $left></ArrowBtn>
-            <ArrowBtn></ArrowBtn>
-          </ButtonWrap>
-          <ItemWrap>
-            <ProductCard />
-          </ItemWrap>
-        </PromotionWrap>
-      </PromotionContainer>
-    </Container>
+    <Carousel title={t("actions")}>
+      {products.map((product, index) => {
+        return <ProductCard key={product.id} product={product} />;
+      })}
+    </Carousel>
   );
 }

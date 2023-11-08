@@ -1,18 +1,28 @@
 import styled from "styled-components";
 import { ReactComponent as Star } from "../../images/svgs/star.svg";
+import { ReactComponent as Heart } from "../../images/svgs/heart.svg";
 
 export const ItemContainer = styled.li`
-  max-width: 282px;
+  width: 282px;
 `;
 
 export const ImgContainer = styled.div`
   position: relative;
   height: 360px;
+  width: 282px;
+
   padding: 22px 0px;
   background-color: var(--clr-card);
 
+  background-image: url(${(props) => props.$img});
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s linear;
+
   ${ItemContainer}:hover & {
     box-shadow: 0px 1px 4px 0px rgba(26, 26, 26, 0.2);
+    background-image: url(${(props) => props.$img2});
+    transition: background-image 0.3s linear;
   }
 `;
 
@@ -29,6 +39,29 @@ export const Inform = styled.div`
   background-color: var(--clr-actoin);
 `;
 
+export const HeartWrap = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 24px;
+  height: 24px;
+
+  ${ItemContainer}:hover & {
+    stroke: black;
+  }
+`;
+
+export const HeartIcon = styled(Heart)`
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    stroke: none;
+    fill: var(--clr-actoin);
+  }
+`;
+
 export const ImgItem = styled.img`
   object-fit: cover;
   width: 100%;
@@ -38,6 +71,7 @@ export const ImgItem = styled.img`
 export const InformContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   row-gap: 10px;
   margin-top: 16px;
 `;
@@ -90,7 +124,7 @@ export const StarIcon = styled(Star)`
   width: 100%;
   height: 100%;
   display: block;
-  /* stroke: black; */
+
   fill: black;
 `;
 

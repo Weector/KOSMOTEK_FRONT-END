@@ -1,6 +1,6 @@
 const TranslationUA = {
   header: {
-    dostavka: "Безкоштовна доставка!",
+    delivery: "Безкоштовна доставка!",
     oferty: "Супер пропозиції!",
 
     placeholder: "Пошук парфумів, косметики, бренду...",
@@ -38,6 +38,25 @@ const TranslationUA = {
     sub: "Акції, знижки та новини відправимо на e-mail",
     placeholder: "Введіть свій e-mail",
     sign_up: "Підписатися",
+  },
+
+  forms: {
+    login: "Вхід",
+    log: "Увійти",
+    forgot_password: "Забули пароль",
+    register: "Реєстрація",
+
+    name: "Ваше ім'я",
+    surname: "Ваше прізвище",
+    birth_date: "Дата народження",
+    phone: "Телефон",
+    email: "E-mail",
+    password: "Пароль",
+    repeat_password: "Повтор пароля",
+    btn_register: "Зареєструватися",
+
+    password_recovery: "Відновлення паролю",
+    remind: "Нагадати",
   },
 };
 

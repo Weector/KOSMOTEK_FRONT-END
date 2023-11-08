@@ -26,6 +26,24 @@ i18n
     resources,
     //   Якщо мова браузера відсутня буде вибрана:
     fallbackLng: "pl",
+
+    detection: {
+      order: [
+        "path",
+        "querystring",
+        "cookie",
+        "htmlTag",
+        "localStorage",
+        "sessionStorage",
+        "subdomain",
+      ],
+      caches: ["cookie", "localStorage"],
+      lookupQuerystring: "lng",
+      lookupCookie: "i18next",
+      lookupLocalStorage: "i18nextLng",
+      lookupSessionStorage: "i18nextLng",
+    },
+
     interpolation: {
       escapeValue: false, // react already safes from xss
     },

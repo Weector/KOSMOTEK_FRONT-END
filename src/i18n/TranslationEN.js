@@ -1,6 +1,6 @@
 const TranslationEN = {
   header: {
-    dostavka: "Dostawa gratis!",
+    delivery: "Dostawa gratis!",
     oferty: "Super oferty!",
 
     placeholder: "Wyszukaj perfumy, kosmetyki, markę...",

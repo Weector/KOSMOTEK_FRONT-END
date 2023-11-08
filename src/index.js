@@ -11,13 +11,18 @@ import GlobalStyles from "./styles/Global.styled";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="">
-      {/* <Provider  store={store}> */}
-      {/* <PersistGate  loading={null} persistor={persistor}> */}
+    <BrowserRouter>
+      {/* <Provider>
+        <PersistGate loading={null}> */}
       <GlobalStyles />
       <App />
-      {/* </PersistGate> */}
-      {/* </Provider> */}
+      {/* </PersistGate>
+      </Provider> */}
     </BrowserRouter>
   </React.StrictMode>
 );
+
+//     <BrowserRouter basename="">
+
+/* <Provider store={store}>*/
+// PersistGate loading={null} persistor={persistor}

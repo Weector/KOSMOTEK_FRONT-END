@@ -1,4 +1,4 @@
-import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import Container from "../../Container/Container";
 import {
   TopContentWrap,
@@ -6,28 +6,57 @@ import {
   LanguageList,
   NavLanguage,
 } from "./HeaderTop.styled";
-import { useTranslation } from "react-i18next";
 
 export default function HeaderTop() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const onClickLanguageChange = (lng) => {
+    i18n.changeLanguage(lng);
+    document.documentElement.lang = lng; // Заміна мови в атрибуті leng html;
+  };
+
   return (
     <HeaderTopWrap>
       <Container>
         <TopContentWrap>
           <div>
-            <a href="/">{t("header.dostavka")} *</a>
+            <a href="/">{t("header.delivery")} *</a>
           </div>
           <div>
             <a href="/">{t("header.oferty")}</a>
           </div>
           <LanguageList>
-            <NavLanguage onClick={() => i18next.changeLanguage("pl")} to="/">
+            <NavLanguage
+              style={{
+                color:
+                  i18n.language === "pl"
+                    ? "var(--clr-main-text)"
+                    : "var(--clr-secondary-text)",
+              }}
+              onClick={() => onClickLanguageChange("pl")}
+            >
               PL
             </NavLanguage>
-            <NavLanguage onClick={() => i18next.changeLanguage("en")} to="/en">
+            <NavLanguage
+              style={{
+                color:
+                  i18n.language === "en"
+                    ? "var(--clr-main-text)"
+                    : "var(--clr-secondary-text)",
+              }}
+              onClick={() => onClickLanguageChange("en")}
+            >
               EN
             </NavLanguage>
-            <NavLanguage onClick={() => i18next.changeLanguage("ua")} to="/ua">
+            <NavLanguage
+              style={{
+                color:
+                  i18n.language === "ua"
+                    ? "var(--clr-main-text)"
+                    : "var(--clr-secondary-text)",
+              }}
+              onClick={() => onClickLanguageChange("ua")}
+            >
               UA
             </NavLanguage>
           </LanguageList>

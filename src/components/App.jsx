@@ -1,24 +1,36 @@
 // import { lazy, Suspense } from "react";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Brands from "./Brands/Brands";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import Hero from "./Hero/Hero";
+
 import Navigation from "./Navigation/Navigation";
-import Promotions from "./Promotions/Promotions";
+import LoginPage from "../pages/AuthPage/LoginPage/LoginPage";
+import RegistrationPage from "../pages/AuthPage/RegistrationPage/RegistrationPage";
+import RecoveringPage from "../pages/AuthPage/RecoveringPage/RecoveringPage";
+import HomePage from "../pages/HomePage/HomePage";
+import { Suspense } from "react";
+import ProductGroupPage from "../pages/ProductGroupPage/ProductGroupPage";
 
 // const Layout = lazy(() => import('./Layout'));
 
 export const App = () => {
   return (
-    <>
+    <Suspense fallback={"Loading..."}>
       <Header />
       <Navigation />
-      <Hero />
-      <Brands />
-      <Promotions />
+      <Routes>
+        <Route path="/">
+          <Route index element={<HomePage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="register" element={<RegistrationPage />} />
+          <Route path="recovering" element={<RecoveringPage />} />
+
+          <Route path="categorys/:group" element={<ProductGroupPage />} />
+        </Route>
+        <Route path="*" element={<HomePage to="/" />} />
+      </Routes>
       <Footer />
-    </>
+    </Suspense>
   );
 };

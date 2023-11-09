@@ -7,8 +7,12 @@ export const CarouselContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 600;
+`;
+
+export const TitleActoin = styled(Title)`
+  font-size: 36px;
   text-align: center;
 
   color: var(--clr-actoin);

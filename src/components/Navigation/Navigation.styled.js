@@ -47,6 +47,8 @@ export const DropdownWrap = styled.div`
   visibility: hidden;
   opacity: 0;
 
+  transition: all 0.5s ease-in-out;
+
   ${NavItem}:hover & {
     visibility: visible;
     opacity: 1;

@@ -1,6 +1,5 @@
 import filters from "../../data/filter.json";
-import { Link } from "react-router-dom";
-import { FilterItem, FilterList } from "./FilterProducts.styled";
+import { FilterItem, FilterLink, FilterList } from "./FilterProducts.styled";
 
 export default function FilterProducts() {
   return (
@@ -8,7 +7,7 @@ export default function FilterProducts() {
       {filters.map((filter) => {
         return (
           <FilterItem key={filter.id}>
-            <Link>{filter.title}</Link>
+            <FilterLink>{filter.title}</FilterLink>
           </FilterItem>
         );
       })}

@@ -48,15 +48,10 @@ export default function Hero() {
         <SlideWrap>
           <SlideButton $left onClick={handleLeft}></SlideButton>
           <Slide>
-            {dataSlide.map((slide, index) => {
-              return (
-                <SlideImg
-                  key={slide.id}
-                  src={`${dataSlide[currentIndex].url}`}
-                  alt={slide.title}
-                />
-              );
-            })}
+            <SlideImg
+              src={`${dataSlide[currentIndex].url}`}
+              alt={`${dataSlide[currentIndex].title}`}
+            />
           </Slide>
           <SlideButton $right onClick={handleRight}></SlideButton>
         </SlideWrap>

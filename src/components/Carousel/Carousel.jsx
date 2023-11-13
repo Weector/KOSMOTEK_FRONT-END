@@ -1,5 +1,3 @@
-import Container from "../Container/Container.jsx";
-
 import {
   Title,
   ButtonWrap,
@@ -9,13 +7,14 @@ import {
   CarouselContainer,
   CarouselWrap,
   SlideContainer,
+  TitleActoin,
 } from "./Carousel.styled.js";
 
 import { useState } from "react";
 
 const WIDTH_SLIDE = 1200;
 
-export default function Carousel({ children, title }) {
+export default function Carousel({ children, title, action }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const maxSlide = -(Math.floor((children.length - 1) / 4) * WIDTH_SLIDE);
@@ -30,38 +29,32 @@ export default function Carousel({ children, title }) {
   const handleRight = () => {
     setCurrentSlide((e) => {
       const newSlide = e - WIDTH_SLIDE;
-      console.log("newSlide", newSlide, "maxSlide", maxSlide);
       return Math.max(newSlide, maxSlide);
     });
   };
 
   return (
-    <Container>
-      <CarouselContainer>
-        <Title>{title}</Title>
-        <CarouselWrap>
-          <ButtonWrap>
-            <ArrowBtn $left onClick={handleLeft} disabled={currentSlide === 0}>
-              <ArrowIcon />
-            </ArrowBtn>
-            <ArrowBtn
-              onClick={handleRight}
-              disabled={currentSlide === maxSlide}
-            >
-              <ArrowIcon />
-            </ArrowBtn>
-          </ButtonWrap>
-          <SlideContainer>
-            <ItemWrap
-              style={{
-                transform: `translateX(${currentSlide}px)`,
-              }}
-            >
-              {children}
-            </ItemWrap>
-          </SlideContainer>
-        </CarouselWrap>
-      </CarouselContainer>
-    </Container>
+    <CarouselContainer>
+      {action ? <TitleActoin>{title}</TitleActoin> : <Title>{title}</Title>}
+      <CarouselWrap>
+        <ButtonWrap>
+          <ArrowBtn $left onClick={handleLeft} disabled={currentSlide === 0}>
+            <ArrowIcon />
+          </ArrowBtn>
+          <ArrowBtn onClick={handleRight} disabled={currentSlide === maxSlide}>
+            <ArrowIcon />
+          </ArrowBtn>
+        </ButtonWrap>
+        <SlideContainer>
+          <ItemWrap
+            style={{
+              transform: `translateX(${currentSlide}px)`,
+            }}
+          >
+            {children}
+          </ItemWrap>
+        </SlideContainer>
+      </CarouselWrap>
+    </CarouselContainer>
   );
 }

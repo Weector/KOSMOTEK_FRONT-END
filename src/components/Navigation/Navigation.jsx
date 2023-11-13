@@ -59,7 +59,7 @@ export default function Navigation() {
               <LinkStyle to="categorys/face">{t("nav.face")}</LinkStyle>
             </NavItem>
             <NavItem>
-              <LinkStyle to="categorys/all">{t("nav.all_products")}</LinkStyle>
+              <LinkStyle to="categorys">{t("nav.all_products")}</LinkStyle>
             </NavItem>
           </NavigationStyle>
         </nav>

@@ -20,21 +20,27 @@ import {
 
 import Button from "../Button/Button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ product, className }) {
   const { t } = useTranslation();
   return (
     <ItemContainer>
-      <ImgContainer $img={product.img} $img2={product.img2}>
-        <Inform>
-          <p>{t("product.action")}</p>
-        </Inform>
-        <HeartWrap>
-          <HeartIcon />
-        </HeartWrap>
-      </ImgContainer>
+      <Link to={`${product.id}`}>
+        <ImgContainer $img={product.img} $img2={product.img2}>
+          <Inform>
+            <p>{t("product.action")}</p>
+          </Inform>
+          <HeartWrap>
+            <HeartIcon />
+          </HeartWrap>
+        </ImgContainer>
+      </Link>
       <InformContainer>
-        <InformTitle>{product.name}</InformTitle>
+        <Link to={`${product.id}`}>
+          <InformTitle>{product.name}</InformTitle>
+        </Link>
+
         <Description>{product.description}</Description>
         <PriceWrap className={className}>
           <div>

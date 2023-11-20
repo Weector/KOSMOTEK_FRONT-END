@@ -19,6 +19,7 @@ const TranslationEN = {
 
   product: {
     action: "Działanie",
+    new: "Nowość",
   },
 
   footer: {

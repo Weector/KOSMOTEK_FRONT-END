@@ -1,7 +1,7 @@
 import React from "react";
-import Recovering from "../../../components/Forms/Recovering/Recovering";
+import Recovering from "../../../components/Auth/Recovering/Recovering";
 
-export default function RecoveringPage() {
+export function RecoveringPage() {
   return (
     <>
       <Recovering />

@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const ProductDiscriptionContainer = styled.div`
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+
+  border-bottom: 0.75px solid var(--clr-stroke);
 `;
 
 export const ProductDiscriptionWrap = styled.div`
   width: 645px;
-  height: 660px;
+  /* height: 660px; */
 `;
 
 export const NameDescriptonList = styled.ul`

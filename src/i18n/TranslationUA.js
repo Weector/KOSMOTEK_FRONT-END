@@ -18,6 +18,7 @@ const TranslationUA = {
 
   product: {
     action: "Акція",
+    new: "Новинка",
   },
 
   footer: {

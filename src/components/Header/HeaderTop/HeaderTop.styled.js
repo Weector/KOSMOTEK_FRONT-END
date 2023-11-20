@@ -17,4 +17,14 @@ export const LanguageList = styled.nav`
   column-gap: 16px;
 `;
 
-export const NavLanguage = styled(Link)``;
+export const NavLanguage = styled(Link)`
+  color: var(--clr-secondary-text);
+
+  &:hover {
+    color: var(--clr-hover);
+  }
+
+  &.act {
+    color: var(--clr-main-text);
+  }
+`;

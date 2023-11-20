@@ -29,8 +29,8 @@ i18n
 
     detection: {
       order: [
-        "path",
         "querystring",
+        // "path",
         "cookie",
         "htmlTag",
         "localStorage",

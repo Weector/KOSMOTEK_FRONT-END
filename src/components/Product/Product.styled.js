@@ -15,11 +15,15 @@ export const ProductsWrap = styled.div`
   margin-bottom: 40px;
 `;
 
+export const Test = styled.div``;
+
 export const ProductImagesContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   padding: 8px;
+
+  margin-bottom: 40px;
 
   width: 612px;
 `;
@@ -70,6 +74,11 @@ export const ProductSmallImageContainer = styled.div`
 
 export const InformContainer = styled.div`
   width: 486px;
+
+  height: 505px;
+
+  position: sticky;
+  top: 40px;
 `;
 
 export const TopInformWrap = styled.div`

@@ -27,34 +27,19 @@ export default function HeaderTop() {
           </div>
           <LanguageList>
             <NavLanguage
-              style={{
-                color:
-                  i18n.language === "pl"
-                    ? "var(--clr-main-text)"
-                    : "var(--clr-secondary-text)",
-              }}
+              className={i18n.language === "pl" ? "act" : null}
               onClick={() => onClickLanguageChange("pl")}
             >
               PL
             </NavLanguage>
             <NavLanguage
-              style={{
-                color:
-                  i18n.language === "en"
-                    ? "var(--clr-main-text)"
-                    : "var(--clr-secondary-text)",
-              }}
+              className={i18n.language === "en" ? "act" : null}
               onClick={() => onClickLanguageChange("en")}
             >
               EN
             </NavLanguage>
             <NavLanguage
-              style={{
-                color:
-                  i18n.language === "ua"
-                    ? "var(--clr-main-text)"
-                    : "var(--clr-secondary-text)",
-              }}
+              className={i18n.language === "ua" ? "act" : null}
               onClick={() => onClickLanguageChange("ua")}
             >
               UA

@@ -17,6 +17,7 @@ const TranslationPL = {
   actions: "PROMOCJE",
   product: {
     action: "Działanie",
+    new: "Nowość",
   },
 
   footer: {

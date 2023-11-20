@@ -37,12 +37,11 @@ import {
   Count,
   ProductImagesList,
   ProductImagesItem,
+  Test,
 } from "./Product.styled";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import ProductDiscription from "./ProductDiscription/ProductDiscription";
-import SimilarProduct from "./SimilarProduct/SimilarProduct";
-import LastReviewed from "./LastReviewed/LastReviewed";
 
 export default function Product({ id }) {
   const product = products.find((pr) => pr.id === id);
@@ -61,32 +60,34 @@ export default function Product({ id }) {
   return (
     <ProductsContainer>
       <ProductsWrap>
-        <ProductImagesContainer>
-          <ProductBigImageContainer>
-            <img src={activImg} alt="" />
-          </ProductBigImageContainer>
-          <ProductImagesWrap>
-            <ProductImagesList>
-              <ProductImagesItem
-                className={activImg === product.img ? "active" : null}
-                onClick={() => setActivImg(product.img)}
-              >
-                <ProductSmallImageContainer>
-                  <img src={product.img} alt="" />
-                </ProductSmallImageContainer>
-              </ProductImagesItem>
-              <ProductImagesItem
-                className={activImg === product.img2 ? "active" : null}
-                onClick={() => setActivImg(product.img2)}
-              >
-                <ProductSmallImageContainer>
-                  <img src={product.img2} alt="" />
-                </ProductSmallImageContainer>
-              </ProductImagesItem>
-            </ProductImagesList>
-          </ProductImagesWrap>
-        </ProductImagesContainer>
-
+        <Test>
+          <ProductImagesContainer>
+            <ProductBigImageContainer>
+              <img src={activImg} alt="" />
+            </ProductBigImageContainer>
+            <ProductImagesWrap>
+              <ProductImagesList>
+                <ProductImagesItem
+                  className={activImg === product.img ? "active" : null}
+                  onClick={() => setActivImg(product.img)}
+                >
+                  <ProductSmallImageContainer>
+                    <img src={product.img} alt="" />
+                  </ProductSmallImageContainer>
+                </ProductImagesItem>
+                <ProductImagesItem
+                  className={activImg === product.img2 ? "active" : null}
+                  onClick={() => setActivImg(product.img2)}
+                >
+                  <ProductSmallImageContainer>
+                    <img src={product.img2} alt="" />
+                  </ProductSmallImageContainer>
+                </ProductImagesItem>
+              </ProductImagesList>
+            </ProductImagesWrap>
+          </ProductImagesContainer>
+          <ProductDiscription />
+        </Test>
         <InformContainer>
           <TopInformWrap>
             <ActionContainer>
@@ -166,9 +167,6 @@ export default function Product({ id }) {
           </ButtonsWrap>
         </InformContainer>
       </ProductsWrap>
-      <ProductDiscription />
-      <SimilarProduct products={products} />
-      <LastReviewed products={products} />
     </ProductsContainer>
   );
 }

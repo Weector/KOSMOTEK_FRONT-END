@@ -1,26 +1,22 @@
 import styled from "styled-components";
 
 export const PathWrap = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 10px 24px;
+  padding: 8px 0px 8px 24px;
 
   background-color: var(--clr-card);
 `;
 
 export const PathList = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+  height: 28px;
 
-export const SortWrap = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 5px;
 `;
 
 export const PathItem = styled.li`

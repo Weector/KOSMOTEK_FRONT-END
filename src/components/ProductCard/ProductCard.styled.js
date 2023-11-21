@@ -1,8 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as Star } from "../../images/svgs/star.svg";
 import { ReactComponent as Heart } from "../../images/svgs/heart.svg";
 
 export const ItemContainer = styled.li`
+  display: flex;
+  flex-direction: column;
+
   width: 282px;
 `;
 
@@ -12,7 +15,7 @@ export const ImgContainer = styled.div`
   width: 282px;
 
   padding: 22px 0px;
-  background-color: var(--clr-card);
+  /* background-color: var(--clr-card); */
 
   background-image: url(${(props) => props.$img});
   background-repeat: no-repeat;
@@ -37,6 +40,12 @@ export const Inform = styled.div`
   text-align: center;
 
   background-color: var(--clr-actoin);
+
+  ${(props) =>
+    props.$new &&
+    css`
+      background-color: #b88484;
+    `}
 `;
 
 export const HeartWrap = styled.div`
@@ -74,6 +83,8 @@ export const InformContainer = styled.div`
   width: 100%;
   row-gap: 10px;
   margin-top: 16px;
+
+  flex-grow: 1;
 `;
 
 export const InformTitle = styled.h3`
@@ -97,6 +108,8 @@ export const Description = styled.p`
 export const PriceWrap = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
+  align-items: flex-end;
 `;
 
 export const StarContainer = styled.div`
@@ -137,7 +150,9 @@ export const PriceAction = styled.p`
   color: var(--clr-actoin);
 `;
 
-export const PricePrevious = styled.p`
+export const PriceValue = styled.p``;
+
+export const PriceValueDefault = styled(PriceValue)`
   color: var(--clr-secondary-text);
   text-decoration: line-through;
 `;

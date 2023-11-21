@@ -69,9 +69,9 @@ export const Input = styled.input`
   border: 0.75px solid var(--clr-main-text);
   outline: none;
 
-  &:focus {
-    border-color: var(--clr-focus);
-  }
+  /* &:focus {
+    border-color: var(--clr-hover);
+  } */
 `;
 
 export const IconsNav = styled.nav`
@@ -86,16 +86,28 @@ export const IconUser = styled(User)`
   height: 24px;
 
   fill: var(--clr-main-text);
+
+  &:hover {
+    fill: var(--clr-hover);
+  }
 `;
 
 export const IconHeart = styled(Heart)`
   width: 24px;
   height: 24px;
   stroke: var(--clr-main-text);
+
+  &:hover {
+    stroke: var(--clr-hover);
+  }
 `;
 
 export const IconShopping = styled(Shopping)`
   width: 24px;
   height: 24px;
   fill: var(--clr-main-text);
+
+  &:hover {
+    fill: var(--clr-hover);
+  }
 `;

@@ -10,7 +10,7 @@ export default function SimilarProduct({ products }) {
     <SimilarProductContainer>
       <SimilarProductTitle>Podobne produkty</SimilarProductTitle>
       <SimilarProductList>
-        {products.map((product) => {
+        {products.slice(0, 4).map((product) => {
           return <ProductCard product={product} key={product.id} />;
         })}
       </SimilarProductList>

@@ -8,7 +8,8 @@
   --clr-bckg: #fff;
   --clr-actoin: #FF5151;
   --clr-focus: #D99A9A;
-  --clr-card: #F8F8F8
+  --clr-card: #F8F8F8;
+  --clr-hover: #B88484;
 }
 
 @font-face {

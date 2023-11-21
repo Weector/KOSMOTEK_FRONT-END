@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const PromotionsContainer = styled.div`
+export const NewProductsContainer = styled.div`
   margin-bottom: 80px;
 `;

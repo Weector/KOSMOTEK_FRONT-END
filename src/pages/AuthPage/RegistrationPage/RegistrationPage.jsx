@@ -1,7 +1,7 @@
 import React from "react";
-import Register from "../../../components/Forms/Register/Register";
+import Register from "../../../components/Auth/Register/Register";
 
-export default function RegistrationPage() {
+export function RegistrationPage() {
   return (
     <>
       <Register />

@@ -1,26 +1,7 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as Arrow } from "../../images/svgs/arrow.svg";
 
-export const CarouselContainer = styled.div`
-  padding-top: 57px;
-  padding-bottom: 40px;
-`;
-
-export const Title = styled.h2`
-  font-size: 20px;
-  font-weight: 600;
-`;
-
-export const TitleActoin = styled(Title)`
-  font-size: 36px;
-  text-align: center;
-
-  color: var(--clr-actoin);
-`;
-
-export const CarouselWrap = styled.div`
-  margin-top: 15px;
-`;
+export const CarouselContainer = styled.div``;
 
 export const ButtonWrap = styled.div`
   display: flex;

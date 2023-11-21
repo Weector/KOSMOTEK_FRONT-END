@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import Button from "../../Button/Button";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   FormContainer,
@@ -7,22 +8,23 @@ import {
   FormTitle,
   Input,
   LincWrap,
-} from "../Forms.styled";
-import { Link } from "react-router-dom";
+} from "../Auth.styled";
 
-export default function Recovering() {
+export default function Login() {
   const { t } = useTranslation();
   return (
     <FormContainer>
-      <FormTitle>{t("forms.password_recovery")}</FormTitle>
+      <FormTitle>{t("forms.login")}</FormTitle>
       <Formik>
         <FormStyled>
           <Input placeholder={t("forms.email")} />
-          <Button text={t("forms.remind")} width="100%" />
+          <Input placeholder={t("forms.password")} />
+          <Button text={t("forms.log")} width="100%" />
         </FormStyled>
       </Formik>
       <LincWrap>
-        <Link to="/login">{t("forms.login")}</Link>
+        <Link to="/recovering">{t("forms.forgot_password")}</Link>
+        <Link to="/register">{t("forms.register")}</Link>
       </LincWrap>
     </FormContainer>
   );

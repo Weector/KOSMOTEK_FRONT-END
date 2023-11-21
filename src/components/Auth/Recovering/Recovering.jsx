@@ -7,25 +7,18 @@ import {
   FormTitle,
   Input,
   LincWrap,
-} from "../Forms.styled";
+} from "../Auth.styled";
 import { Link } from "react-router-dom";
 
-export default function Register() {
+export default function Recovering() {
   const { t } = useTranslation();
-
   return (
     <FormContainer>
-      <FormTitle>{t("forms.register")}</FormTitle>
+      <FormTitle>{t("forms.password_recovery")}</FormTitle>
       <Formik>
         <FormStyled>
-          <Input placeholder={t("forms.name")} />
-          <Input placeholder={t("forms.surname")} />
-          <Input placeholder={t("forms.birth_date")} />
-          <Input placeholder={t("forms.phone")} />
           <Input placeholder={t("forms.email")} />
-          <Input placeholder={t("forms.password")} />
-          <Input placeholder={t("forms.repeat_password")} />
-          <Button text={t("forms.btn_register")} width="100%" />
+          <Button text={t("forms.remind")} width="100%" />
         </FormStyled>
       </Formik>
       <LincWrap>
@@ -34,5 +27,3 @@ export default function Register() {
     </FormContainer>
   );
 }
-
-//  &#x2A;

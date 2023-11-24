@@ -5,17 +5,11 @@ import { ReactComponent as Plus } from "../../images/svgs/plus.svg";
 import { ReactComponent as Minus } from "../../images/svgs/minus.svg";
 
 export const ProductsContainer = styled.div`
-  padding-top: 40px;
-`;
+  padding: 40px 0px;
 
-export const ProductsWrap = styled.div`
   display: flex;
   justify-content: space-between;
-
-  margin-bottom: 40px;
 `;
-
-export const Test = styled.div``;
 
 export const ProductImagesContainer = styled.div`
   display: flex;
@@ -73,12 +67,11 @@ export const ProductSmallImageContainer = styled.div`
 `;
 
 export const InformContainer = styled.div`
-  width: 486px;
-
-  height: 505px;
-
   position: sticky;
   top: 40px;
+
+  width: 486px;
+  height: 100%;
 `;
 
 export const TopInformWrap = styled.div`

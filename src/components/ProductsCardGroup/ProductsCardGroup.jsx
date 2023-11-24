@@ -1,16 +1,14 @@
-import React from "react";
-import products from "../../data/product.json";
-import ProductCard from "../ProductCard/ProductCard";
-import { ProductsList, ProductsWrap } from "./ProductsCardGroup.styled";
+import React from 'react';
 
-export default function ProductsCardGroup() {
+import ProductCard from '../ProductCard/ProductCard';
+import { ProductsList } from './ProductsCardGroup.styled';
+
+export default function ProductsCardGroup({ products }) {
   return (
-    <ProductsWrap>
-      <ProductsList>
-        {products.map((product, index) => {
-          return <ProductCard key={product.id} product={product} />;
-        })}
-      </ProductsList>
-    </ProductsWrap>
+    <ProductsList>
+      {products.map((product, index) => {
+        return <ProductCard key={product.id} product={product} />;
+      })}
+    </ProductsList>
   );
 }

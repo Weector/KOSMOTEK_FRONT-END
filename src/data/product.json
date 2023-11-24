@@ -61,15 +61,16 @@
     "group": "Oczy"
   },
   {
-     "id": "6",
-    "name": "Chanel Les Beiges Palette Regard Belle Mine Naturelle",
-    "description": "Paleta cieni do powiek z efektem naturalnego blasku",
-    "price": "25.75",
-    "action": "21.45",
-    "coments": "5",
-    "stars": "5",
-    "img": "/img/products/9.png",
-    "img2": "/img/products/8.png",
-    "group": "Palety do makijażu"
-  }
+    "id": "6",
+   "name": "Catrice Brow Powder Set Waterproof",
+   "description": "Paleta do brwi",
+   "price": "23.75",
+   "action": "22.45",
+   "coments": "10",
+   "stars": "5",
+   "img": "/img/products/2.png",
+   "img2": "/img/products/1.png",
+   "group": "Palety do makijażu"
+ }
+ 
 ]

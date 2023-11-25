@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const ProductDiscriptionContainer = styled.div`
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
 
-  border-bottom: 0.75px solid var(--clr-stroke);
+  /* border-bottom: 0.75px solid var(--clr-stroke); */
 `;
 
 export const ProductDiscriptionWrap = styled.div`
@@ -43,7 +43,7 @@ export const NameDescriptonItem = styled.li`
 `;
 
 export const DescriptonList = styled.ul`
-  padding: 24px 15px 0px 0px;
+  padding: 24px 0px 0px 0px;
   height: 100%;
 
   overflow: auto;

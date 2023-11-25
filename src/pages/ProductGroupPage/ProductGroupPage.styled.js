@@ -10,3 +10,7 @@ export const Wrap = styled.div`
   justify-content: space-between;
   padding: 40px 0px;
 `;
+
+export const ProductsWrap = styled.div`
+  width: 894px;
+`;

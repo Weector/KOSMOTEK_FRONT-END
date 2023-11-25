@@ -1,42 +1,47 @@
 @import-normalize;
 
-
-:root{
-  --clr-stroke: #CECECE;
-  --clr-main-text: #1A1A1A;
-  --clr-secondary-text:#B8B8B8;
+:root {
+  --clr-stroke: #cecece;
+  --clr-main-text: #1a1a1a;
+  --clr-secondary-text: #b8b8b8;
   --clr-bckg: #fff;
-  --clr-actoin: #FF5151;
-  --clr-focus: #D99A9A;
-  --clr-card: #F8F8F8;
-  --clr-hover: #B88484;
+  --clr-actoin: #ff5151;
+  --clr-focus: #d99a9a;
+  --clr-card: #f8f8f8;
+  --clr-hover: #b88484;
 }
 
 @font-face {
   font-family: 'Fixel Text';
   font-display: swap;
-  src: local('FixelText-Regular'), url('../src/styles/fonts/FixelText/FixelText-Regular.ttf') format("truetype"),
-  url('../src/styles/fonts/FixelText/FixelText-Regular.woff2') format("woff2");
+  src: local('FixelText-Regular'),
+    url('../src/styles/fonts/FixelText/FixelText-Regular.ttf')
+      format('truetype'),
+    url('../src/styles/fonts/FixelText/FixelText-Regular.woff2') format('woff2');
   font-weight: 400;
-	font-style: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Fixel Text';
   font-display: swap;
-  src: local('FixelText-Medium'), url('../src/styles/fonts/FixelText/FixelText-Medium.ttf') format("truetype"),
-  url('../src/styles/fonts/FixelText/FixelText-Medium.woff2') format("woff2");
+  src: local('FixelText-Medium'),
+    url('../src/styles/fonts/FixelText/FixelText-Medium.ttf') format('truetype'),
+    url('../src/styles/fonts/FixelText/FixelText-Medium.woff2') format('woff2');
   font-weight: 500;
-	font-style: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Fixel Text';
   font-display: swap;
-  src: local('FixelText-SemiBold'), url('../src/styles/fonts/FixelText/FixelText-SemiBold.ttf') format("truetype"),
-  url('../src/styles/fonts/FixelText/FixelText-SemiBold.woff2') format("woff2");
+  src: local('FixelText-SemiBold'),
+    url('../src/styles/fonts/FixelText/FixelText-SemiBold.ttf')
+      format('truetype'),
+    url('../src/styles/fonts/FixelText/FixelText-SemiBold.woff2')
+      format('woff2');
   font-weight: 600;
-	font-style: normal;
+  font-style: normal;
 }
 
 body {
@@ -44,11 +49,11 @@ body {
   font-family: 'Fixel Text', sans-serif;
   font-size: 14px;
   letter-spacing: 0.56px;
-  line-height: normal;
+  line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-   color: var(--clr-main-text);
+  color: var(--clr-main-text);
 }
 
 code {
@@ -56,33 +61,32 @@ code {
     monospace;
 }
 
-
 /* ============================ */
 
 /* Стилізація скрола для Firefox*/
-html, body {
-    scrollbar-color: #B8B8B8 #1A1A1A; /* «цвет ползунка» «цвет полосы скроллбара» */
-    scrollbar-width: thin;  /* толщина */
+html,
+body {
+  scrollbar-color: #b8b8b8 #1a1a1a; /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin; /* толщина */
 }
 
 /* Стилізація скрола для інших браузерів*/
 
 /* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
-    width: 3px; /* ширина для вертикального скролла */
-    height: 3px; /* высота для горизонтального скролла */
-    background-color: #fff;
+  width: 3px; /* ширина для вертикального скролла */
+  height: 3px; /* высота для горизонтального скролла */
+  background-color: #fff;
 }
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-    background-color: #B8B8B8;
-    border-radius: 9em; 
-   
+  background-color: #b8b8b8;
+  border-radius: 9em;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #1A1A1A;
+  background-color: #1a1a1a;
 }
 
 /* ========================================================= */

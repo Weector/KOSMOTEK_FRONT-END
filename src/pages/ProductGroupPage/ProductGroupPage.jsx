@@ -1,9 +1,9 @@
-import React from "react";
-
-import FilterProducts from "../../components/FilterProducts/FilterProducts";
-import ProductsCardGroup from "../../components/ProductsCardGroup/ProductsCardGroup";
-import { Wrap, PageContainer } from "./ProductGroupPage.styled";
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import React from 'react';
+import products from '../../data/product.json';
+import FilterProducts from '../../components/FilterProducts/FilterProducts';
+import ProductsCardGroup from '../../components/ProductsCardGroup/ProductsCardGroup';
+import { Wrap, PageContainer, ProductsWrap } from './ProductGroupPage.styled';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 
 export function ProductGroupPage() {
   return (
@@ -11,7 +11,9 @@ export function ProductGroupPage() {
       <Breadcrumbs />
       <Wrap>
         <FilterProducts />
-        <ProductsCardGroup />
+        <ProductsWrap>
+          <ProductsCardGroup products={products} />
+        </ProductsWrap>
       </Wrap>
     </PageContainer>
   );

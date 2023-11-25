@@ -4,6 +4,7 @@ import { ReactComponent as Search } from "../../../images/svgs/search.svg";
 import { ReactComponent as User } from "../../../images/svgs/user-alt.svg";
 import { ReactComponent as Heart } from "../../../images/svgs/heart.svg";
 import { ReactComponent as Shopping } from "../../../images/svgs/shopping-cart.svg";
+import { Link } from "react-router-dom";
 
 export const HeaderMiddleContainer = styled.div`
   display: flex;
@@ -79,6 +80,25 @@ export const IconsNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   column-gap: 40px;
+`;
+
+export const IconLink = styled(Link)`
+  height: 24px;
+`;
+
+export const Cicle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 24px;
+  height: 24px;
+
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--clr-hover);
+
+  border: 1px solid var(--clr-hover);
+  border-radius: 50%;
 `;
 
 export const IconUser = styled(User)`

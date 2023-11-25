@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const SimilarProductContainer = styled.div`
-  padding-bottom: 80px;
-  padding-top: 80px;
+  padding: 40px 0px;
 
-  border-bottom: 0.75px solid var(--clr-stroke);
+  border-top: 0.75px solid var(--clr-stroke);
 `;
 
 export const SimilarProductTitle = styled.h2`

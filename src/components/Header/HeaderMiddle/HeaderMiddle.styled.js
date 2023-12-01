@@ -83,6 +83,7 @@ export const IconsNav = styled.nav`
 `;
 
 export const IconLink = styled(Link)`
+  position: relative;
   height: 24px;
 `;
 
@@ -130,4 +131,21 @@ export const IconShopping = styled(Shopping)`
   &:hover {
     fill: var(--clr-hover);
   }
+`;
+
+export const ShoppingTotalProducts = styled.div`
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  width: 15px;
+  height: 15px;
+
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+
+  background-color: var(--clr-hover);
+  border-radius: 50%;
 `;

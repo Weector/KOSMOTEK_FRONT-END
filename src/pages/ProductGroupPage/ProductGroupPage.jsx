@@ -8,7 +8,7 @@ import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 export function ProductGroupPage() {
   return (
     <PageContainer>
-      <Breadcrumbs />
+      <Breadcrumbs sort />
       <Wrap>
         <FilterProducts />
         <ProductsWrap>

@@ -1,8 +1,8 @@
-import { Btn, IconShopping } from "./Button.styled";
+import { Btn, IconShopping } from './Button.styled';
 
-export default function Button({ text, width, isShopping }) {
+export default function Button({ text, width, isShopping, onClick }) {
   return (
-    <Btn $size={width}>
+    <Btn $size={width} onClick={onClick} type="submit">
       <span>{text}</span>
       {isShopping && <IconShopping />}
     </Btn>

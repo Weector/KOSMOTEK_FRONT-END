@@ -41,6 +41,13 @@ export const App = () => {
           },
         },
         {
+          path: 'basket',
+          async lazy() {
+            let { BasketPage } = await import('../pages/BasketPage/BasketPage');
+            return { Component: BasketPage };
+          },
+        },
+        {
           path: 'user',
           async lazy() {
             let { PersonalAccountPage } = await import(

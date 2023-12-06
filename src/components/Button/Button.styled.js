@@ -31,7 +31,7 @@ export const Btn = styled.button`
       width: 0px;
       height: 0.75px;
       background: var(--clr-card);
-      transition: width 0.3s linear;
+      transition: width 0.2s linear;
     }
   }
 

@@ -5,10 +5,20 @@
   --clr-main-text: #1a1a1a;
   --clr-secondary-text: #b8b8b8;
   --clr-bckg: #fff;
-  --clr-actoin: #ff5151;
+  --clr-actoin: #f3424f;
   --clr-focus: #d99a9a;
   --clr-card: #f8f8f8;
   --clr-hover: #b88484;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-display: swap;
+  src: local('FixelText-Light'),
+    url('../src/styles/fonts/FixelText/FixelText-Light.ttf') format('truetype'),
+    url('../src/styles/fonts/FixelText/FixelText-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {

@@ -1,14 +1,14 @@
-import React from "react";
-import { Link, useMatches } from "react-router-dom";
-import { PathItem, PathList, PathWrap } from "./Breadcrumbs.styled";
-import SelectSort from "../SelectSort/SelectSort";
+import React from 'react';
+import { Link, useMatches } from 'react-router-dom';
+import { PathItem, PathList, PathWrap } from './Breadcrumbs.styled';
+import SelectSort from '../SelectSort/SelectSort';
 
-export default function Breadcrumbs() {
+export default function Breadcrumbs({ sort }) {
   let matches = useMatches();
 
   let crumbs = matches
-    .filter((match) => Boolean(match.handle?.crumb))
-    .map((match) => match.handle.crumb(match.data));
+    .filter(match => Boolean(match.handle?.crumb))
+    .map(match => match.handle.crumb(match.data));
 
   return (
     <PathWrap>
@@ -21,7 +21,7 @@ export default function Breadcrumbs() {
           );
         })}
       </PathList>
-      <SelectSort />
+      {sort && <SelectSort />}
     </PathWrap>
   );
 }

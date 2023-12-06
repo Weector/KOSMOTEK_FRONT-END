@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   IconUser,
   IconHeart,
@@ -12,11 +12,17 @@ import {
   ButtonSearch,
   Cicle,
   IconLink,
+  ShoppingTotalProducts,
 } from './HeaderMiddle.styled';
 import Container from '../../Container/Container';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { selectBasket } from '../../../redux/backet/backet-selectors';
 
 export default function HeaderMiddle() {
+  const location = useLocation();
+  const totalProductsInBasket = useSelector(selectBasket).length;
+
   const login = true;
 
   const name = 'maras';
@@ -43,16 +49,21 @@ export default function HeaderMiddle() {
               </Cicle>
             </Link>
           ) : (
-            <IconLink to="/login">
+            <IconLink>
               <IconUser />
             </IconLink>
           )}
 
-          <IconLink>
+          <IconLink to="/user/favorite">
             <IconHeart />
           </IconLink>
-          <IconLink>
+          <IconLink to="/basket" state={{ from: location }}>
             <IconShopping />
+            {totalProductsInBasket > 0 && (
+              <ShoppingTotalProducts>
+                {totalProductsInBasket}
+              </ShoppingTotalProducts>
+            )}
           </IconLink>
         </IconsNav>
       </HeaderMiddleContainer>

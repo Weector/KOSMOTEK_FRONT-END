@@ -28,23 +28,18 @@ import {
   Variant,
   StatusWrap,
   KodProduct,
-  CountWrap,
   ButtonsWrap,
-  CountButton,
-  MinucIcon,
-  PlusIcon,
-  Count,
   ProductImagesList,
   ProductImagesItem,
 } from './Product.styled';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import ProductDiscription from './ProductDiscription/ProductDiscription';
+import Count from '../Count/Count';
+import { useDispatch } from 'react-redux';
+import { addBasket } from '../../redux/backet/backet-slice';
 
 export default function Product({ id }) {
-  const product = products.find(pr => pr.id === id);
-
-  const [activImg, setActivImg] = useState(product.img);
   const [totalProduct, setTotalProduct] = useState(1);
 
   const handleCountPlus = () => {
@@ -53,6 +48,15 @@ export default function Product({ id }) {
 
   const handleCountMinus = () => {
     setTotalProduct(prevState => prevState - 1);
+  };
+
+  const product = products.find(pr => pr.id === id);
+
+  const [activImg, setActivImg] = useState(product.img);
+
+  const dispatch = useDispatch();
+  const handleAddProduct = id => {
+    dispatch(addBasket(id, totalProduct));
   };
 
   return (
@@ -92,11 +96,9 @@ export default function Product({ id }) {
           </ActionContainer>
           <LikeWrap>
             <p> Do ulubionych</p>
-            <Link>
-              <HeartWrap>
-                <HeartIcon />
-              </HeartWrap>
-            </Link>
+            <HeartWrap>
+              <HeartIcon />
+            </HeartWrap>
           </LikeWrap>
         </TopInformWrap>
         <ProductTitle>{product.name}</ProductTitle>
@@ -148,19 +150,17 @@ export default function Product({ id }) {
           </StatusWrap>
         </VariantContainer>
         <ButtonsWrap>
-          <CountWrap>
-            <CountButton
-              disabled={totalProduct <= 1}
-              onClick={handleCountMinus}
-            >
-              <MinucIcon />
-            </CountButton>
-            <Count>{totalProduct}</Count>
-            <CountButton onClick={handleCountPlus} name="plus">
-              <PlusIcon />
-            </CountButton>
-          </CountWrap>
-          <Button text="Do kosza" width="342px" isShopping></Button>
+          <Count
+            totalProduct={totalProduct}
+            handleCountPlus={handleCountPlus}
+            handleCountMinus={handleCountMinus}
+          />
+          <Button
+            text="Do kosza"
+            width="342px"
+            isShopping
+            onClick={() => handleAddProduct(product.id)}
+          ></Button>
         </ButtonsWrap>
       </InformContainer>
     </ProductsContainer>

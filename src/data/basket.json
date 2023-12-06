@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "L`Oréal Paris Volume Million Lashes Classic",
+    "description": "Tusz do rzęs zapewniający wyrazistą objętość rzęs",
+    "price": "21.75",
+    "action": "16.75",
+    "coments": "2",
+    "stars": "5",
+    "img": "/img/products/5.png",
+    "img2": "/img/products/4.png",
+    "group": "Oczy"
+  },
+  {
+    "id": "2",
+   "name": "Chanel Les Beiges Palette Regard Belle Mine Naturelle",
+   "description": "Paleta cieni do powiek z efektem naturalnego blasku",
+   "price": "25.75",
+  
+   "coments": "5",
+   "stars": "5",
+   "img": "/img/products/9.png",
+   "img2": "/img/products/8.png",
+   "group": "Palety do makijażu"
+   
+ }
+ 
+ 
+]

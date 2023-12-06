@@ -17,11 +17,16 @@ import {
   HeartWrap,
   PriceValue,
   PriceValueDefault,
-} from "./ProductCard.styled";
+} from './ProductCard.styled';
 
-import Button from "../Button/Button";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import Button from '../Button/Button';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addBasket } from '../../redux/backet/backet-slice';
+import { useState } from 'react';
+
+import ModalAddProduct from '../Modal/ModalAddProduct';
 
 export default function ProductCard({
   product,
@@ -29,19 +34,33 @@ export default function ProductCard({
   action,
   newProduct,
 }) {
+  const [isModal, setIsModal] = useState(false);
+
+  const toggleModal = () => {
+    setIsModal(!isModal);
+  };
+
+  const dispatch = useDispatch();
+
   const { t } = useTranslation();
+
+  const handleAddProduct = id => {
+    dispatch(addBasket(id, 1));
+    toggleModal();
+  };
+
   return (
     <ItemContainer>
       <Link to={`${product.id}`}>
         <ImgContainer $img={product.img} $img2={product.img2}>
           {action && (
             <Inform>
-              <p>{t("product.action")}</p>
+              <p>{t('product.action')}</p>
             </Inform>
           )}
           {newProduct && (
             <Inform $new>
-              <p>{t("product.new")}</p>
+              <p>{t('product.new')}</p>
             </Inform>
           )}
           <HeartWrap>
@@ -83,10 +102,18 @@ export default function ProductCard({
             </PriceContainer>
           </div>
           <ButtonWrap>
-            <Button text="Do kosza" width="148px" isShopping></Button>
+            <Button
+              text="Do kosza"
+              width="148px"
+              isShopping
+              onClick={() => handleAddProduct(product.id)}
+            ></Button>
           </ButtonWrap>
         </PriceWrap>
       </InformContainer>
+      {isModal && (
+        <ModalAddProduct toggleModal={toggleModal} product={product.name} />
+      )}
     </ItemContainer>
   );
 }
